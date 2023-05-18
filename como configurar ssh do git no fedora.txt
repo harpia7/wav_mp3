@@ -38,28 +38,56 @@
 		+----[SHA256]-----+
 	$ 
 	
-2 - adicionar uma nova chave SSH ao ssh-agent
-
-	iniciando ssh-agent
-	
-	$ eval "$(ssh-agent -s)"
-	> Agent pid 59566
-	
-	
-mais de uma chave a partir daqui repetir para cada chave...
-	
-	adicionando chave privada
-	
-	$ ssh-add ~/.ssh/id_ed25519_qasd137
-	Identity added: /home/flavio/.ssh/id_ed25519_qasd137 (qasd137@gmail.com)
-
-
-3 - Adicione a chave publica ao SSH à sua conta em GitHub (https://github.com/settings/keys) 
+2 - Adicione a chave publica ao SSH à sua conta em GitHub (https://github.com/settings/keys) 
 	New SSH Keys
 	
 	com qqer editor abra id_ed25519_qasd137.pub , copie e cole no quadro aberto em New SSH Keys
 	
 	
+3 - adicionar a nova chave SSH ao ssh-agent	
+	iniciando ssh-agent
+	
+	$ eval "$(ssh-agent -s)"
+	> Agent pid 59566
+	
+
+uso com mais de uma chave 
+	
+	remove todas as chaves anteriores 
+	
+	$ ssh-add -D
+
+	
+	adicionando chave privada desejada
+	
+	$ ssh-add ~/.ssh/id_ed25519_qasd137
+	Identity added: /home/flavio/.ssh/id_ed25519_qasd137 (qasd137@gmail.com)
+
+		ou
+		
+			$ ssh-add ~/.ssh/id_harpia7
+
+
+	conferindo se conexão foi estabelecida
+
+	$ ssh -T git@github.com
+	Hi qasd137! You've successfully authenticated, but GitHub does not provide shell access.
+	
+			Hi harpia7! You've successfully authenticated, but GitHub does not provide shell access.
 	
 	
+	identificando usuario github
+	
+	git config --global user.name qasd137
+	git config --global user.email qasd137@gmail.com
+	
+	e apontando repositório 
+	
+	git config --global git@github.com:qasd137/disco_virtual.git
+	
+
+	
+
+	
+
 	

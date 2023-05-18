@@ -1,0 +1,65 @@
+#
+# tutorial para configurar par chaves SSH no Fedora
+#
+# usei para gerar chaves e configura-las no fedora e usar  no github
+#//
+#			Flavio 2023/05/18
+#
+
+
+1 - gerar par de chaves usando algoritmo ed25519
+
+	$ ssh-keygen -t ed25519 -C "your_email@example.com"
+	$ ssh-keygen -t ed25519 -C qasd137@gmail.com
+
+		Generating public/private ed25519 key pair.
+		Enter file in which to save the key (/home/flavio/.ssh/id_ed25519):  /home/flavio/.ssh/id_ed25519_qasd137
+
+		Enter passphrase (empty for no passphrase):
+		Enter same passphrase again:
+		
+		Your identification has been saved in /home/flavio/.ssh/id_ed25519_qasd137
+		Your public key has been saved in /home/flavio/.ssh/id_ed25519_qasd137ll.pub
+		
+		The key fingerprint is:
+		SHA256:LkeTTg+Zv/8f82yvLCILIDHIpZdGDapXVSjTrFoU32g qasd137@gmail.com
+		
+		The key's randomart image is:
+		+--[ED25519 256]--+
+		|   +++.o.        |
+		|..= =++o         |
+		|.+o=.+E .        |
+		|. o+o.   +       |
+		|. oo.   S        |
+		| ... . = =       |
+		|      o + o    o |
+		|       +. .... .=|
+		|        .o.o.o++*|
+		+----[SHA256]-----+
+	$ 
+	
+2 - adicionar uma nova chave SSH ao ssh-agent
+
+	iniciando ssh-agent
+	
+	$ eval "$(ssh-agent -s)"
+	> Agent pid 59566
+	
+	
+mais de uma chave a partir daqui repetir para cada chave...
+	
+	adicionando chave privada
+	
+	$ ssh-add ~/.ssh/id_ed25519_qasd137
+	Identity added: /home/flavio/.ssh/id_ed25519_qasd137 (qasd137@gmail.com)
+
+
+3 - Adicione a chave publica ao SSH à sua conta em GitHub (https://github.com/settings/keys) 
+	New SSH Keys
+	
+	com qqer editor abra id_ed25519_qasd137.pub , copie e cole no quadro aberto em New SSH Keys
+	
+	
+	
+	
+	

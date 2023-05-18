@@ -2,4 +2,7 @@
 
 primeira alteração do windows
 segunda alteração do windows
-bash script convert wav to mp3 !!
+
+primeira alteracao com linux/ssh
+
+bash script convert wav to mp3 !!!

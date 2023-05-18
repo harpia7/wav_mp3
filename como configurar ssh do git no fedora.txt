@@ -78,12 +78,24 @@ uso com mais de uma chave
 	
 	identificando usuario github
 	
-	git config --global user.name qasd137
-	git config --global user.email qasd137@gmail.com
+		$ git config --global user.name qasd137
+		$ git config --global user.email qasd137@gmail.com
 	
 	e apontando repositório 
 	
-	git config --global git@github.com:qasd137/disco_virtual.git
+		$ git config --global git@github.com:qasd137/disco_virtual.git
+
+	
+	ou criando um folder remoto
+	
+		$ git remote add origin git@github.com:harpia7/wav_mp3.git
+	
+
+	ou copiando um repositorio na maq local
+	
+		$ git clone git@github.com:harpia7/wav_mp3.git
+	
+	
 	
 
 	

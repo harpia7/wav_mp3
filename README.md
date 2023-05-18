@@ -10,12 +10,12 @@ bash script convert wav to mp3 !!!
 uso :
 	- copie para uma pasta todos os .wav que deseja transcodificar
 
-	- copie para dentro desta pasta wav_to_mp3.sh e certifique que tempermisao de execução rwx
+	- copie para dentro desta pasta wav_to_mp3.sh e certifique que tem permisao de execução rwx
 
 	- parametro opcional após o comando a taxa de bits por segundo deve ser escrita sem abreviaçoes
 		192k ==>> 192000
 		256k ==>> 256000
-		128k ==>> 128000 ( default )
+		128k ==>> 128000 ( default, no paramters)
 	
 	
 		ex: $ ./wav_to_mp3.sh 128000 

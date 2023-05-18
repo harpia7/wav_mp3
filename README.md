@@ -1,6 +1,6 @@
 # wav_mp3
 #
-#			Script montado para trancodificar audio padrão wav para mp3 por lote 
+#			Script montado para transcodificar audio padrão wav para mp3 por lote 
 #		fazendo uso do ffmpeg via linha de comando
 #
 #  arquivo original criado em 03/2015
@@ -11,9 +11,9 @@ uso :
 
 1 - copie para uma pasta todos os .wav que deseja transcodificar
 
-2 - copie para dentro desta pasta wav_to_mp3.sh e certifique que tem permisao de execução rwx
+2 - copie para dentro desta pasta wav_to_mp3.sh e certifique que tem permisão de execução rwx
 
-3 - parametro opcional após o comando, a taxa de bits por segundo, deve ser escrita sem abreviaçoes
+3 - parametro opcional após o comando, a taxa de bits por segundo, deve ser escrita sem abreviaçes
 		
 		192k ==>> 192000
 		256k ==>> 256000
